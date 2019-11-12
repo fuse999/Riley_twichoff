@@ -9,6 +9,9 @@ def create_app():
     # Add config
     app.config["SQLALCHEMY_DATABASE_URL"] = "sqlite:///df.sqlite3"
 
+    # Have the database know about the app
+    DB.init_app(app)
+
     @app.route('/')
     def root():
         return 'Welcome to Twitoff'
