@@ -3,6 +3,6 @@
 from .app import create_app
 
 # APP is a Global var
-APP = create_app
+APP = create_app()
 
 # run this in terminal with set FLASK_APP=TWITOFF:APP (and) flask run
